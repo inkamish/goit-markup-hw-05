@@ -517,6 +517,7 @@ header {
   border-radius: 4px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   max-width: 264px;
+  height: 40px;
 }
 
 input[type="email"]::placeholder {
@@ -527,18 +528,19 @@ input[type="email"]::placeholder {
 }
 
 .subscribe-button {
+  min-width: 165px;
+  height: 40px;
   color: white;
+  cursor: pointer;
   background-color: #4d5ae5;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.04em;
   border-radius: 4px;
-  padding: 8px 24px;
   border: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 16px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -549,6 +551,7 @@ input[type="email"]::placeholder {
 
 .icon-send {
   fill: white;
+  margin-left: 16px;
 }
 /* ---------------------------------- */
 
@@ -578,16 +581,18 @@ input[type="email"]::placeholder {
 .modal-contact-form {
   padding: 24px;
   width: 408px;
+  min-height: 584px;
   border-radius: 4px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background: #fcfcfc;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-close-button {
   width: 24px;
   height: 24px;
-  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background-color: #e7e9fc;
   display: flex;
@@ -595,11 +600,16 @@ input[type="email"]::placeholder {
   margin-bottom: 24px;
   justify-content: center;
   align-items: center;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  padding: 0;
 }
 
-.form-close-button:hover {
+.form-close-button:hover,
+.form-close-button:focus {
   background-color: #404bbf;
+  border: none;
 }
 
 .close-button-icon {
@@ -684,7 +694,7 @@ input[type="email"]::placeholder {
   margin-bottom: 16px;
 }
 
-.container-accept-terms label {
+.accept-terms-title {
   font-size: 12px;
   line-height: 1.16667;
   letter-spacing: 0.04em;
@@ -697,11 +707,6 @@ input[type="email"]::placeholder {
   text-decoration: underline;
   text-decoration-skip-ink: none;
   color: #4d5ae5;
-}
-
-.contact-form-label.checkbox {
-  display: flex;
-  align-items: center;
 }
 
 .checkbox-costum {
