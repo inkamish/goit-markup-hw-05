@@ -731,8 +731,8 @@ input[type="email"]::placeholder {
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-input:checked .check-span {
-  background-color: #4d5ae5;
+.form-input.checkbox:checked .check-span {
+  background-color: #404bbf;
   border: none;
   fill: #f4f4fd;
 }
